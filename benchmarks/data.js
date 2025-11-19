@@ -1,39 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1763484190394,
+  "lastUpdate": 1763548441198,
   "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "8b5b01de98127549026c3b0c385fe05e2e635539",
-          "message": "Merge pull request #309 from czlonkowski/feature/library-usage-multi-tenant\n\nfeat: Add library usage support for multi-tenant deployments",
-          "timestamp": "2025-10-11T22:53:14+02:00",
-          "tree_id": "0f2f16689451703fd8f6699adfb3cc3699de25e5",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/8b5b01de98127549026c3b0c385fe05e2e635539"
-        },
-        "date": 1760216109460,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0136,
-            "range": "0.3096",
-            "unit": "ms",
-            "extra": "73341 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1542,6 +1511,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/5575630711733f121edf298a64c94ab971051243"
         },
         "date": 1763484189965,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "47d9f55dc55b600b953d885bad2dba729f5baecc",
+          "message": "chore: update n8n to 1.120.3 and bump version to 2.22.20 (#430)\n\n- Updated n8n from 1.119.1 to 1.120.3\n- Updated n8n-core from 1.118.0 to 1.119.2\n- Updated n8n-workflow from 1.116.0 to 1.117.0\n- Updated @n8n/n8n-nodes-langchain from 1.118.0 to 1.119.1\n- Rebuilt node database with 544 nodes (439 from n8n-nodes-base, 105 from @n8n/n8n-nodes-langchain)\n- Updated README badge with new n8n version\n- Updated CHANGELOG with dependency changes\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Claude <noreply@anthropic.com>",
+          "timestamp": "2025-11-19T11:31:51+01:00",
+          "tree_id": "89d14ead67bd7b1f340ea82e53fef8e96c82beec",
+          "url": "https://github.com/czlonkowski/n8n-mcp/commit/47d9f55dc55b600b953d885bad2dba729f5baecc"
+        },
+        "date": 1763548440457,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
