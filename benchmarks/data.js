@@ -1,39 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1764184762244,
+  "lastUpdate": 1764247962863,
   "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "0f5b0d9463149923267293cd3b7255e6fb2c7116",
-          "message": "chore: bump version to 2.19.6 (#324)\n\nBump version to 2.19.6 to be higher than npm registry version (2.19.5).\n\n🤖 Generated with [Claude Code](https://claude.ai/code)\n\nCo-authored-by: Claude <noreply@anthropic.com>",
-          "timestamp": "2025-10-14T11:31:29+02:00",
-          "tree_id": "e4047fc43eb58852478cbd87602f38541268f578",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/0f5b0d9463149923267293cd3b7255e6fb2c7116"
-        },
-        "date": 1760434398965,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0136,
-            "range": "0.3096",
-            "unit": "ms",
-            "extra": "73341 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1542,6 +1511,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/bac4936c6d4b1c5675a893f18ba3ffcd2e58dc08"
         },
         "date": 1764184761981,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c7e7bda5051b1e3a28ecca2a174a4a82870edc2c",
+          "message": "fix: remove historical migration info from tools documentation (v2.26.5) (#448)\n\n- Remove \"Replaces X, Y, Z...\" sentences from full.description in:\n  - get_node, validate_node, search_templates, n8n_executions, n8n_get_workflow\n- Remove version/issue references from n8n_update_partial_workflow\n- Clean up consolidation comments in index.ts\n- Documentation now starts directly with functional content\n- Estimated token savings: ~128 tokens per full documentation request\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Claude <noreply@anthropic.com>",
+          "timestamp": "2025-11-27T13:50:45+01:00",
+          "tree_id": "58364b70cce2ede7f3441e7f68a55122477feb12",
+          "url": "https://github.com/czlonkowski/n8n-mcp/commit/c7e7bda5051b1e3a28ecca2a174a4a82870edc2c"
+        },
+        "date": 1764247962585,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
