@@ -1,39 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768210078647,
+  "lastUpdate": 1768322967774,
   "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "1bbfaabbc20f4989d81bc8a2cfc9f16795134ed8",
-          "message": "fix: add structural hash tracking for workflow mutations (#422)\n\n* feat: add structural hashes and success tracking for workflow mutations\n\nEnables cross-referencing workflow_mutations with telemetry_workflows by adding structural hashes (nodeTypes + connections) alongside existing full hashes.\n\n**Database Changes:**\n- Added workflow_structure_hash_before/after columns\n- Added is_truly_successful computed column\n- Created 3 analytics views: successful_mutations, mutation_training_data, mutations_with_workflow_quality\n- Created 2 helper functions: get_mutation_success_rate_by_intent(), get_mutation_crossref_stats()\n\n**Code Changes:**\n- Updated mutation-tracker.ts to generate both hash types\n- Updated mutation-types.ts with new fields\n- Auto-converts to snake_case via existing toSnakeCase() function\n\n**Testing:**\n- Added 5 new unit tests for structural hash generation\n- All 17 tests passing\n\n**Tooling:**\n- Created backfill script to populate hashes for existing 1,499 mutations\n- Created comprehensive documentation (STRUCTURAL_HASHES.md)\n\n**Impact:**\n- Before: 0% cross-reference match rate\n- After: Expected 60-70% match rate (post-backfill)\n- Unlocks quality impact analysis, training data curation, and mutation pattern insights\n\nConceived by Romuald Członkowski - www.aiadvisors.pl/en\n\n* fix: correct test operation types for structural hash tests\n\nFixed TypeScript errors in mutation-tracker tests by adding required\n'updates' parameter to updateNode operations. Used 'as any' for test\noperations to maintain backward compatibility while tests are updated.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n* chore: remove documentation files from tracking\n\nRemoved internal documentation files from version control:\n- Telemetry implementation docs\n- Implementation roadmap\n- Disabled tools analysis docs\n\nThese files are for internal reference only.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n* chore: remove telemetry documentation files from tracking\n\nRemoved all telemetry analysis and documentation files from root directory.\nThese files are for internal reference only and should not be in version control.\n\nFiles removed:\n- TELEMETRY_ANALYSIS*.md\n- TELEMETRY_MUTATION_SPEC.md\n- TELEMETRY_*_DATASET.md\n- VALIDATION_ANALYSIS*.md\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n* chore: bump version to 2.22.18 and update CHANGELOG\n\nVersion 2.22.18 adds structural hash tracking for workflow mutations,\nenabling cross-referencing with workflow quality data and automated\nsuccess detection.\n\nKey changes:\n- Added workflowStructureHashBefore/After fields\n- Added isTrulySuccessful computed field\n- Enhanced mutation tracking with structural hashes\n- All tests passing (17/17)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n* chore: remove migration and documentation files from PR\n\nRemoved internal database migration files and documentation from\nversion control:\n- docs/migrations/\n- docs/telemetry/\n\nUpdated CHANGELOG to remove database migration references.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en",
-          "timestamp": "2025-11-14T13:57:54+01:00",
-          "tree_id": "7e4b59726deadbda59817c8cc790bc76dc07fdc0",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/1bbfaabbc20f4989d81bc8a2cfc9f16795134ed8"
-        },
-        "date": 1763125191377,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0136,
-            "range": "0.3096",
-            "unit": "ms",
-            "extra": "73341 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1530,6 +1499,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/a9c4400a929d644287825afd6bde0681dc4bb103"
         },
         "date": 1768210078230,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "974a9fb3492fe2c4984ee0549085d531cdc6242a",
+          "message": "chore: update n8n to 2.3.3 and bump version to 2.33.2 (#535)\n\n- Updated n8n from 2.2.3 to 2.3.3\n- Updated n8n-core from 2.2.2 to 2.3.2\n- Updated n8n-workflow from 2.2.2 to 2.3.2\n- Updated @n8n/n8n-nodes-langchain from 2.2.2 to 2.3.2\n- Rebuilt node database with 537 nodes (434 from n8n-nodes-base, 103 from @n8n/n8n-nodes-langchain)\n- Updated README badge with new n8n version\n- Updated CHANGELOG with dependency changes\n\nConceived by Romuald Członkowski - https://www.aiadvisors.pl/en\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+          "timestamp": "2026-01-13T17:47:27+01:00",
+          "tree_id": "79bb647536c9c858570eb5aef0acf8a1bbcb4a15",
+          "url": "https://github.com/czlonkowski/n8n-mcp/commit/974a9fb3492fe2c4984ee0549085d531cdc6242a"
+        },
+        "date": 1768322967350,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
