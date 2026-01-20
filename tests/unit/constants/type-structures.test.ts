@@ -11,7 +11,7 @@ import { isTypeStructure } from '@/types/type-structures';
 import type { NodePropertyTypes } from 'n8n-workflow';
 
 describe('TYPE_STRUCTURES', () => {
-	// All 22 NodePropertyTypes from n8n-workflow
+	// All 23 NodePropertyTypes from n8n-workflow
 	const ALL_PROPERTY_TYPES: NodePropertyTypes[] = [
 		'boolean',
 		'button',
@@ -20,6 +20,7 @@ describe('TYPE_STRUCTURES', () => {
 		'dateTime',
 		'fixedCollection',
 		'hidden',
+		'icon',
 		'json',
 		'callout',
 		'notice',
@@ -38,9 +39,9 @@ describe('TYPE_STRUCTURES', () => {
 	];
 
 	describe('Completeness', () => {
-		it('should define all 22 NodePropertyTypes', () => {
+		it('should define all 23 NodePropertyTypes', () => {
 			const definedTypes = Object.keys(TYPE_STRUCTURES);
-			expect(definedTypes).toHaveLength(22);
+			expect(definedTypes).toHaveLength(23);
 
 			for (const type of ALL_PROPERTY_TYPES) {
 				expect(TYPE_STRUCTURES).toHaveProperty(type);
